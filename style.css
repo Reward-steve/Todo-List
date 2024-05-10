@@ -1,0 +1,133 @@
+* {
+    margin-top: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background: rgb(206 197 238);
+}
+
+.form1,
+.form2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.to-do-list {
+    width: 50%;
+    height: auto;
+    border: 4px solid darkcyan;
+    border-radius: 0 0 10px 10px;
+    background: lightslategrey;
+}
+
+.overall-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+    background-color: lightslategrey;
+}
+
+.toDoList-container {
+    width: 80%;
+}
+
+.title {
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    font-size: 30px;
+    color: #01f7ff;
+}
+
+.input1,
+.input2 {
+    width: 80%;
+    height: 35px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans';
+    font-style: italic;
+    border-radius: 3px;
+}
+
+.submitBtn,
+.editBtn {
+    border-radius: 5px;
+    color: white;
+    background: green;
+    border: none;
+    font-family: monospace;
+    width: 80px;
+    height: 20px;
+}
+
+#ulList {
+    padding: 0;
+    width: 100%;
+}
+
+.list {
+    background: gainsboro;
+    list-style: none;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Segoe UI';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.list:hover {
+    background: darkgray;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.trash:hover {
+    color: red;
+}
+
+.check-box {
+    padding: 3px;
+}
+
+.spanHolder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.strick {
+    text-decoration: line-through;
+}
+
+@media screen and (max-width:400px) {
+    body {
+        margin: 0;
+    }
+
+    .to-do-list {
+        width: 100%;
+        height: auto;
+        border: 4px solid darkcyan;
+        border-radius: 0 0 10px 10px;
+        background: lightslategrey;
+    }
+}
