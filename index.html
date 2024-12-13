@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>Add Your Daily Task</header>
+    <div class="container">
+      <form>
+        <label class="input-form">
+          <input type="text" placeholder="Add your tasks" />
+          <div class="action">
+            <button id="add-task" title="Add-Task">🧺</button>
+            <button id="clear-task" title="Clear-Task">🗑️</button>
+          </div>
+        </label>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do list</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="FONT5/css/all.min.css">
-</head>
+        <ul class="uList"></ul>
 
-<body>
-    <div class="to-do-list">
-        <div class="overall-container">
-
-            <div class="toDoList-container">
-                <h3 class="title">My to do list</h3>
-
-                <form class="form1">
-                    <input type="text" class="input1" placeholder="activities.....">
-                    <button type="submit" class="submitBtn">Add Text</button>
-                </form>
-
-            </div>
-
+        <div id="filter">
+          <p>Sort By:</p>
+          <p>
+            <input type="radio" value="a-z" name="filter" />
+            A-Z
+          </p>
+          <p>
+            <input type="radio" value="checked" name="filter" />
+            Completed
+          </p>
+          <p>
+            <input type="radio" value="z-a" name="filter" />
+            Z-A
+          </p>
         </div>
-
-        <ul id="ulList">
-
-        </ul>
+      </form>
     </div>
 
-
-    <script src="app.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

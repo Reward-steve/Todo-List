@@ -1,133 +1,180 @@
-* {
-    margin-top: 0;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  list-style-type: none;
+  color: white;
+  font-family: monospace;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    background: rgb(206 197 238);
+  /* background: linear-gradient(50deg, rgb(0, 43, 59), #38779e); */
+  background: linear-gradient(60deg, #38779e, white);
 }
 
-.form1,
-.form2 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: monospace;
+  font-weight: 100;
+  font-size: 2.5em;
 }
 
-
-.hidden {
-    display: none;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 10px 0 0 0;
+  padding-bottom: 20px;
 }
 
-.to-do-list {
-    width: 50%;
-    height: auto;
-    border: 4px solid darkcyan;
-    border-radius: 0 0 10px 10px;
-    background: lightslategrey;
+form {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+  backdrop-filter: brightness(0.8);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px black;
 }
 
-.overall-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 150px;
-    background-color: lightslategrey;
+form .input-form {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.toDoList-container {
-    width: 80%;
+form .input-form input {
+  padding: 15px;
+  width: 80%;
+  height: 40px;
+  border-radius: 0 10px 10px 0;
+  font-size: 1.3em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.212);
 }
 
-.title {
-    font-family: 'Trebuchet MS';
-    font-weight: bold;
-    font-size: 30px;
-    color: #01f7ff;
+form .input-form .action {
+  width: 15%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.input1,
-.input2 {
-    width: 80%;
-    height: 35px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Lucida Sans';
-    font-style: italic;
-    border-radius: 3px;
+form .input-form button {
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, 0.212);
+  cursor: pointer;
 }
 
-.submitBtn,
-.editBtn {
-    border-radius: 5px;
-    color: white;
-    background: green;
-    border: none;
-    font-family: monospace;
-    width: 80px;
-    height: 20px;
+form .uList {
+  width: 100%;
+  text-align: center;
+  height: auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 20px;
+  backdrop-filter: brightness(0.5);
+  border-radius: 0 0 10px 10px;
 }
 
-#ulList {
-    padding: 0;
-    width: 100%;
+form .uList .list {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.list {
-    background: gainsboro;
-    list-style: none;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    font-family: 'Segoe UI';
-    font-style: italic;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 4px;
+.cancle {
+  cursor: pointer;
+  background: red;
+  color: white;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.list:hover {
-    background: darkgray;
-    cursor: pointer;
-    transition: .5s;
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid gray;
+  padding: 10px;
 }
 
-.trash:hover {
-    color: red;
+.uList :last-child {
+  border: none;
 }
 
-.check-box {
-    padding: 3px;
+.completed {
+  text-decoration: line-through;
+  color: black;
 }
 
-.spanHolder {
-    display: flex;
-    justify-content: space-between;
+select option {
+  text-align: center;
 }
 
-.strick {
-    text-decoration: line-through;
+#filter {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 0 0 12px 12px;
+  background-color: rgba(0, 0, 0, 0.212);
 }
 
-@media screen and (max-width:400px) {
-    body {
-        margin: 0;
-    }
-
-    .to-do-list {
-        width: 100%;
-        height: auto;
-        border: 4px solid darkcyan;
-        border-radius: 0 0 10px 10px;
-        background: lightslategrey;
-    }
+#filter input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+#filter input[type="radio"]:checked::after {
+  content: "";
+  width: 10px;
+  background: #38779e;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
